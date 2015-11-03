@@ -1,0 +1,40 @@
+<div class="container-fluid star-bg topmarg bottmarg">
+	<div class="well well-sm topmarg">
+		<p class="film-font nomarg">This example uses <span><a href="http://themoviedb.org"><img alt="tmdb logo" class="tmdblogo" src="img/tmdblogo.svg"></a> API to query their database for your search term. Clicking on the results shows the details for selected movie. There is also a slider with images for the movie. Clicking the left or right arrows stops the slider interval, moves to next/previous image and resumes interval. Mousing over the image stops the interval, moving mouse off the image resumes the interval.</span></p>
+	</div>
+	<h5 style="color:white">Enter Film Name</h5>
+	<form novalidate class="film-form">
+		<div class="input-group">
+			<span class="input-group-addon"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
+			<input class="form-control" ng-focus="inputFocus()" ng-change="theSearch()" ng-model="searchterm">
+		</div>
+	</form>
+	<table ng-class="{hide: showing == 'false', fadeIn: fadein == 'false', fadeOut: fadeout == 'false'}" class="table table-bordered animated film-list">
+		<tr ng-click="hideThis($index, movie.id)" ng-repeat="movie in movies">
+			<td><h5 class="film-font"><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span> {{movie.title}}</h5></td>
+		</tr>
+	</table>
+
+	<div class="animated detail-container clearfix bottmarg" ng-class="{hide: showing == 'true', fadeIn: fadein == 'true', fadeOut: fadeout == 'true'}">
+		
+		<div class="no-pad film-font col-md-12 col-xs-12 col-sm-12">
+		<button class="pull-left square btn light-blue" ng-click="theToggle()"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></button>
+			<h4 class="text-center movie-title">{{single_movie.title}}</h4>
+			<img src="img/hr.png" class="hr img img-responsive">
+		</div>
+		<div class="col-md-6 col-xs-12 col-sm-6">
+			<img class="img img-responsive" ng-mouseover="cancelSlider()" ng-mouseout="startSlider()" src="http://image.tmdb.org/t/p/w500{{image[count].file_path}}" alt="">
+			<div class="btn-group btn-group-justified max-width" role="group" aria-label="...">
+				<a class="btn btn-default" ng-click="countDown()"><span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span></a>
+				<a class="btn btn-default" ng-click="countUp()"><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></a>
+			</div>
+		</div>
+		<div class="film-font col-md-6 col-xs-12 col-sm-6 film-details">
+			<h5>{{single_movie.title}}</h5>
+			<h5>Year: {{single_movie.release_date}}</h5>
+			<h5>Number of votes:  <span class="badge custom-badge">{{single_movie.vote_count}}</span></h5>
+			<h5>Vote Average: <span class="badge custom-badge">{{single_movie.vote_average}}</span></h5>
+			<p>Synopsis: {{single_movie.overview}}</p>
+		</div>	    
+	</div>
+</div>

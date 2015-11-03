@@ -1,0 +1,59 @@
+$screen-sm-min: 768px;
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-md-min: 992px;
+$screen-sm-max: ($screen-md-min - 1);
+$screen-lg-min: 1200px;
+$screen-md-max: ($screen-lg-min - 1);
+.tmdblogo{
+	height: 20px;
+}
+.table-bordered>tbody>tr>td:hover, .table-bordered>tbody>tr>th:hover, .table-bordered>tfoot>tr>td:hover, .table-bordered>tfoot>tr>th:hover, .table-bordered>thead>tr>td:hover, .table-bordered>thead>tr>th:hover{
+	background: black;
+	cursor: pointer;
+	h5{
+		color: white;
+	}
+}
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th{
+	background-color: white;
+	opacity: 0.95;
+}
+.film-form{
+	margin-bottom: 24px;
+	.input-group-addon{
+		background-color: black;
+    	color: white;
+	}
+}
+.outer{
+	background-image: url(../img/star-space-tile.jpg);
+	height: 100%;
+	margin: 0;
+	background-attachment: fixed;
+	display: flex;
+}
+.detail-container{
+	background-color: white;
+}
+.movie-title{
+	width: 100%;
+	margin-top: 20px;
+}
+.max-width{
+	max-width: 500px;
+}
+@media (max-width: $screen-sm-min) { 
+	.film-details{
+		padding:20px !important;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+
+ }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) { 
+
+}

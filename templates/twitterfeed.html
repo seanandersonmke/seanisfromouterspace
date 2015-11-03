@@ -1,0 +1,15 @@
+
+<div class="content pure-u-1 pure-u-md-1-1">
+ <div class="tweet_container">
+  <form novalidate>
+   <input ng-model="tweetname" type="text" name="twitter_name">
+    <button type="submit">Submit</button>
+  </form>
+ </div>
+ <div>
+ <div ng-repeat="tweet in tweets" class="tweet_container">
+	<p><i class='fa fa-twitter'></i></p>
+	<div>
+	<h4>{{tweet.text}}</h4>
+	</div>
+</div>

@@ -1,0 +1,34 @@
+.sean-img{	
+	max-width: 100px !important;
+    background-image: url(../img/star-space-tile.jpg);
+    background-size: cover;
+    padding-bottom: 0;
+}
+.close{
+	position: absolute;
+	right: 0;
+    width: 22px;
+    height: 21px;
+    background: white !important;
+}
+.mb-image{
+	cursor: pointer;
+}
+.mb-image-height{
+	max-height: 323px;
+}
+.mb-image:hover{
+	border: #1DC3F7 4px solid;
+}
+.whitebg{
+	padding: 14px;
+	background: white;
+}
+.media-object{
+	margin-right: 12px !important;
+}
+.star-bg{
+	background-image: url(../img/star-space-tile.jpg);
+	background-size: 226px;
+	background-attachment: fixed;
+}
