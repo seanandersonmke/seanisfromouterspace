@@ -576,6 +576,9 @@ a:visited {
 .bottmarg {
   margin-bottom: 20px; }
 
+.notopmarg {
+  margin-top: 0; }
+
 .set-height {
   height: 100%; }
 
