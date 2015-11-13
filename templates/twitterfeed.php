@@ -65,7 +65,11 @@ foreach($link as $twlink){
 //print_r($twitter_data);
 }
 ?>
-<div class="pure-g">
+<div class="container-fluid">
+  <div class="alert alert-warning alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <p>Custom Twitter feed. Done using only PHP, not AngularJs. Using Curl to make the HTTP request to Twitter and such PHP functions as rawurlencode, base64_encode and hash_hmac to encode the headers to make Oauth transactions. Then using PHP to format the return data as needed.</p>
+  </div>
   <div class="content col-md-6 col-xs-6 col-xs-6">
     <div class="tweet_container">
       <h4><i class='fa fa-user'></i>Wired Magazine</h4>
@@ -195,7 +199,6 @@ foreach($twitter_data['billnye'] as $data){
 
   </div>
 </div>
-
 
 
 

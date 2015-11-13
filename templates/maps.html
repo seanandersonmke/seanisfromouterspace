@@ -1,9 +1,10 @@
 <div id="loader" ng-show="showSpinner" class="loader"></div>
 <div class="container-fluid topmarg">
-	<div class="well well-sm">
- 		<p>This is a demo of Google Maps API. When first entering the page, it asks to allow your location, if allowed, it shows a map of your current location, if declined it defaults to a Milwaukee map. There are custom icons for several of the different location "types" and also a backup default icon if it doesn't match the handful I set up. The drop</p>
+    <div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+ 		<p>This is a demo of Google Maps API. When first entering the page, it asks to allow use of your location, if allowed, it shows a map of your current location, if declined it defaults to a Milwaukee map. There are custom icons for several of the different location "types" and also a backup default icon if the type does not match the handful I set up. When clicking an icon, it pulls in information and user reviews for the location. On mobile devices the reviews can be swiped left and right. Also shows an animated loader when loading new maps.</p>
 	</div>
-			<form navalidate>
+			<form novalidate>
 			<span class="label label-default">Select type of location:</span>
 			<select class="form-control" ng-change="getLocation()" ng-model="theType">
 				<option value="{{key}}" ng-repeat="(key, value) in mapType">{{value}}</option>
@@ -45,7 +46,7 @@
 					</div>
 				</div>
 				<div ng-class="change_review_class" class="animated review-header-text-two">
-					<h5 class="location_detail">Username - {{review.author_name}}</h5>
+					<h4 class="location_detail">Google username - {{review.author_name}}</h4>
 					<p>{{review.text}}</p>
 				</div>
 			</div>

@@ -6,6 +6,9 @@ var app = angular.module('sample_app', ['ngRoute', 'ngTouch']).config(['$routePr
         controller: 'MapController'
       }).
       when('/', {
+        templateUrl: 'templates/home.html',
+      }).
+      when('/portfolio', {
         templateUrl: 'templates/main.html',
         controller: 'MainController'
       }).
@@ -21,9 +24,9 @@ var app = angular.module('sample_app', ['ngRoute', 'ngTouch']).config(['$routePr
         templateUrl: 'templates/filmsearch.html',
         controller: 'FilmController'
       }).
-      when('/nasa', {
-        templateUrl: 'templates/nasa.html',
-        controller: 'NasaController'
+      when('/freelance-info', {
+        templateUrl: 'templates/rates.html',
+        controller: 'ContactFormController'
       })
   }]);
 

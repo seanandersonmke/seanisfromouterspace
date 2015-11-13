@@ -7,6 +7,9 @@ $screen-md-max: ($screen-lg-min - 1);
 .tmdblogo{
 	height: 20px;
 }
+.film-search{
+	color: white;
+}
 .table-bordered>tbody>tr>td:hover, .table-bordered>tbody>tr>th:hover, .table-bordered>tfoot>tr>td:hover, .table-bordered>tfoot>tr>th:hover, .table-bordered>thead>tr>td:hover, .table-bordered>thead>tr>th:hover{
 	background: black;
 	cursor: pointer;
@@ -25,19 +28,13 @@ $screen-md-max: ($screen-lg-min - 1);
     	color: white;
 	}
 }
-.outer{
-	background-image: url(../img/star-space-tile.jpg);
-	height: 100%;
-	margin: 0;
-	background-attachment: fixed;
-	display: flex;
-}
 .detail-container{
 	background-color: white;
 }
 .movie-title{
 	width: 100%;
 	margin-top: 20px;
+	font-size: 14px;
 }
 .max-width{
 	max-width: 500px;
@@ -45,6 +42,12 @@ $screen-md-max: ($screen-lg-min - 1);
 @media (max-width: $screen-sm-min) { 
 	.film-details{
 		padding:20px !important;
+	}
+	.film-search{
+		color: black;
+		font-family: "PT Mono";
+    	font-weight: bold;
+    	margin-left: 2px;
 	}
 }
 
